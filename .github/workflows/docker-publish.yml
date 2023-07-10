@@ -4,7 +4,7 @@ on:
   push:
     # Publish `master` as Docker `latest` image.
     branches:
-      - master
+      - main
 
     # Publish `v1.2.3` tags as releases.
     tags:
@@ -13,6 +13,9 @@ on:
 env:
   # TODO: Change variable to your image's name.
   IMAGE_NAME: postgres-q3c
+
+permissions:
+  packages: write
 
 jobs:
   # Push image to GitHub Packages.
